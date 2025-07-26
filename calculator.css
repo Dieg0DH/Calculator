@@ -1,8 +1,8 @@
 :root {
   --primary-dark: #1a1a2e;
   --secondary-dark: #16213e;
-  --accent-orange: #f39c12;
-  --accent-green: #27ae60;
+  --accent-operation: #34495e;
+  --accent-blue: #00b5f7;
   --accent-red: #e74c3c;
   --text-light: #ecf0f1;
   --button-default: #34495e;
@@ -91,25 +91,25 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-button:hover::before {
-  width: 300px;
-  height: 300px;
+button[data-number]:hover {
+  background: var(--button-hover);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .operation {
-  background: var(--accent-orange);
+  background: var(--accent-operation);
 }
 
 .operation:hover {
-  background: #e67e22;
+  background: #2c3e50;
 }
 
 .equals {
-  background: var(--accent-green);
+  background: var(--accent-blue);
 }
 
 .equals:hover {
-  background: #229954;
+  background: #1fa4d5;
 }
 
 .function {
@@ -124,7 +124,6 @@ button:hover::before {
   grid-column: span 2;
 }
 
-/* Responsive design */
 @media (max-width: 500px) {
   .calculator {
     padding: 1.5rem;
@@ -140,7 +139,6 @@ button:hover::before {
   }
 }
 
-/* Animation for button press */
 @keyframes buttonPress {
   0% {
     transform: scale(1);
