@@ -96,6 +96,11 @@ button[data-number]:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+button[data-decimal]:hover {
+  background: var(--button-hover);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 .operation {
   background: var(--accent-operation);
 }
