@@ -110,7 +110,8 @@ export class Calculator {
   getDisplayNumber(number) {
     if (
       typeof number === "string" &&
-      (number.includes("Cannot divide by zero!") || number === "Error")
+      (number === ERROR_MESSAGES.DIVISION_BY_ZERO ||
+        number === ERROR_MESSAGES.INVALID_INPUT)
     ) {
       return number;
     }
@@ -139,6 +140,12 @@ export class Calculator {
       this.currentElement.innerText = this.getDisplayNumber(
         this.currentOperand
       );
+    }
+
+    if (this.currentOperand === ERROR_MESSAGES.DIVISION_BY_ZERO) {
+      this.currentElement.classList.add("current-operand-error-message");
+    } else {
+      this.currentElement.classList.remove("current-operand-error-message");
     }
 
     if (this.previousElement) {
