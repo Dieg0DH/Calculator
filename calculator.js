@@ -65,6 +65,10 @@ export class Calculator {
   compute() {
     if (!this.operation || this.currentOperand === "") return;
 
+    const fullOperation = `${this.getDisplayNumber(this.previousOperand)} ${
+      this.operation
+    } ${this.getDisplayNumber(this.currentOperand)}`;
+
     let computation;
     const prev = parseFloat(this.previousOperand);
     const current = parseFloat(this.currentOperand);
@@ -94,13 +98,13 @@ export class Calculator {
 
       computation = parseFloat(computation.toFixed(10));
       this.currentOperand = computation.toString();
-      this.operation = undefined;
-      this.previousOperand = "";
+      this.previousOperand = fullOperation;
+      this.operation = "=";
       this.justComputed = true;
     } catch (error) {
       this.currentOperand = error.message;
       this.operation = undefined;
-      this.previousOperand = "";
+      this.previousOperand = fullOperation;
       this.justComputed = true;
     }
 
@@ -149,7 +153,9 @@ export class Calculator {
     }
 
     if (this.previousElement) {
-      if (this.operation != null) {
+      if (this.operation === "=") {
+        this.previousElement.innerText = `${this.previousOperand} =`;
+      } else if (this.operation != null) {
         this.previousElement.innerText = `${this.getDisplayNumber(
           this.previousOperand
         )} ${this.operation}`;
