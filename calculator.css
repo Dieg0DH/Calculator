@@ -7,6 +7,7 @@
   --button-action-bg: #232b34;
   --button-equals: #ff9500;
   --button-equals-text: #fff;
+  --button-equals-hover: #ffa11e;
   --text-main: #fff;
   --text-secondary: #b0b0b0;
 }
@@ -125,6 +126,12 @@ button.operation {
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(255, 149, 0, 0.18);
   border: none;
+}
+
+.equals:hover {
+  background: var(--button-equals-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.25);
 }
 
 .span-two {
