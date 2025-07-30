@@ -13,6 +13,7 @@
   --button-equals-active: #ff7c0a;
   --text-main: #fff;
   --text-secondary: #b0b0b0;
+  --error-message: #ff6b6b;
 }
 
 body {
@@ -95,13 +96,13 @@ button {
 }
 
 button:hover {
-  background: #3a4149;
+  background: var(--button-hover);
   transform: translateY(-2px);
 }
 
 button:active {
   transform: translateY(0);
-  background: #181f25;
+  background: var(--button-active);
   opacity: 0.85;
 }
 
@@ -111,12 +112,12 @@ button.operation {
 }
 
 button.operation:hover {
-  background: #3a4149;
+  background: var(--button-hover);
   color: var(--button-action);
 }
 
 button.operation:active {
-  background: #181f25;
+  background: var(--button-active);
 }
 
 button[data-number] {
@@ -125,12 +126,12 @@ button[data-number] {
 }
 
 button[data-number]:hover {
-  background: #3a4149;
+  background: var(--button-hover);
   transform: translateY(-2px);
 }
 
 button[data-number]:active {
-  background: #181f25;
+  background: var(--button-active);
   transform: translateY(0);
 }
 
@@ -144,13 +145,13 @@ button[data-decimal] {
 button[data-clear]:hover,
 button[data-delete]:hover,
 button[data-decimal]:hover {
-  background: #3a4149;
+  background: var(--button-hover);
 }
 
 button[data-clear]:active,
 button[data-delete]:active,
 button[data-decimal]:active {
-  background: #181f25;
+  background: var(--button-active);
 }
 
 .equals {
@@ -177,6 +178,26 @@ button[data-decimal]:active {
   border-radius: 18px;
   justify-content: center;
   padding-left: 0;
+}
+
+.current-operand-error-message {
+  color: var(--error-message);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 500px) {
