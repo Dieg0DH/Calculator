@@ -1,19 +1,22 @@
 :root {
-  --primary-bg: #ff9500;
+  --primary-bg: #ffffff;
   --calc-bg: #232b34;
+  --calc-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
   --button-bg: #232b34;
-  --button-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --button-shadow: 0 2px 0 rgba(255, 255, 255, 0.1) inset,
+    0 4px 8px rgba(0, 0, 0, 0.214);
   --button-action: #ff9500;
   --button-action-bg: #232b34;
-  --button-equals: #ff9500;
-  --button-equals-text: #fff;
-  --button-equals-hover: #ffa11e;
+  --button-hover: #3a4149;
+  --button-active: #181f25;
+  --button-equals-hover: #ff9d47;
+  --button-equals-active: #ff7c0a;
   --text-main: #fff;
   --text-secondary: #b0b0b0;
 }
 
 body {
-  background: white;
+  background: var(--primary-bg);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,7 +30,7 @@ body {
   background: var(--calc-bg);
   padding: 32px 18px 18px 18px;
   border-radius: 36px;
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: var(--calc-shadow);
   max-width: 340px;
   width: 100%;
   overflow: hidden;
@@ -82,8 +85,7 @@ button {
   font-weight: 500;
   width: 64px;
   height: 64px;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.1) inset,
-    0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--button-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,15 +96,27 @@ button {
 
 button:hover {
   background: #3a4149;
-  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.1) inset,
-    0 6px 12px rgba(0, 0, 0, 0.25);
   transform: translateY(-2px);
 }
 
 button:active {
   transform: translateY(0);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset,
-    0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #181f25;
+  opacity: 0.85;
+}
+
+button.operation {
+  background: var(--button-action-bg);
+  color: var(--button-action);
+}
+
+button.operation:hover {
+  background: #3a4149;
+  color: var(--button-action);
+}
+
+button.operation:active {
+  background: #181f25;
 }
 
 button[data-number] {
@@ -110,28 +124,51 @@ button[data-number] {
   color: var(--text-main);
 }
 
+button[data-number]:hover {
+  background: #3a4149;
+  transform: translateY(-2px);
+}
+
+button[data-number]:active {
+  background: #181f25;
+  transform: translateY(0);
+}
+
 button[data-clear],
 button[data-delete],
-button[data-decimal],
-button.operation {
+button[data-decimal] {
   background: var(--button-action-bg);
   color: var(--button-action);
-  font-weight: 500;
+}
+
+button[data-clear]:hover,
+button[data-delete]:hover,
+button[data-decimal]:hover {
+  background: #3a4149;
+}
+
+button[data-clear]:active,
+button[data-delete]:active,
+button[data-decimal]:active {
+  background: #181f25;
 }
 
 .equals {
-  background: var(--button-equals);
-  color: var(--button-equals-text);
+  background: var(--button-action);
+  color: var(--text-main);
   font-size: 1.7rem;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(255, 149, 0, 0.18);
   border: none;
 }
 
 .equals:hover {
   background: var(--button-equals-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.25);
+}
+
+.equals:active {
+  background: var(--button-equals-active);
+  color: var(--text-main);
 }
 
 .span-two {
@@ -140,10 +177,6 @@ button.operation {
   border-radius: 18px;
   justify-content: center;
   padding-left: 0;
-}
-
-button:active {
-  opacity: 0.85;
 }
 
 @media (max-width: 500px) {
