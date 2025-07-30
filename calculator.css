@@ -1,23 +1,13 @@
 :root {
-  --primary-bg: #ffffff;
-  --calc-bg: #232b34;
   --calc-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
-  --button-bg: #232b34;
   --button-shadow: 0 2px 0 rgba(255, 255, 255, 0.1) inset,
     0 4px 8px rgba(0, 0, 0, 0.214);
-  --button-action: #ff9500;
-  --button-action-bg: #232b34;
-  --button-hover: #3a4149;
-  --button-active: #181f25;
-  --button-equals-hover: #ff9d47;
-  --button-equals-active: #ff7c0a;
-  --text-main: #fff;
-  --text-secondary: #b0b0b0;
-  --error-message: #ff6b6b;
+  --equals-shadow: 0 2px 0 rgba(255, 255, 255, 0.36) inset,
+    0 4px 8px rgba(0, 0, 0, 0.214);
 }
 
 body {
-  background: var(--primary-bg);
+  background: #ffffff;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,7 +18,7 @@ body {
 }
 
 .calculator {
-  background: var(--calc-bg);
+  background: #232b34;
   padding: 32px 18px 18px 18px;
   border-radius: 36px;
   box-shadow: var(--calc-shadow);
@@ -51,7 +41,7 @@ body {
 }
 
 .previous-operand {
-  color: var(--text-secondary);
+  color: #b0b0b0;
   font-size: 1.1rem;
   min-height: 1.3rem;
   margin-bottom: 6px;
@@ -59,7 +49,7 @@ body {
 }
 
 .current-operand {
-  color: var(--text-main);
+  color: #fff;
   font-size: 2.7rem;
   font-weight: 400;
   line-height: 1.1;
@@ -80,8 +70,8 @@ button {
   font-size: 1.5rem;
   border: none;
   border-radius: 18px;
-  background: var(--button-bg);
-  color: var(--text-main);
+  background: #232b34;
+  color: #fff;
   cursor: pointer;
   font-weight: 500;
   width: 64px;
@@ -96,80 +86,51 @@ button {
 }
 
 button:hover {
-  background: var(--button-hover);
+  background: #3a4149;
   transform: translateY(-2px);
 }
 
 button:active {
   transform: translateY(0);
-  background: var(--button-active);
   opacity: 0.85;
 }
 
-button.operation {
-  background: var(--button-action-bg);
-  color: var(--button-action);
-}
-
-button.operation:hover {
-  background: var(--button-hover);
-  color: var(--button-action);
-}
-
-button.operation:active {
-  background: var(--button-active);
-}
-
-button[data-number] {
-  background: var(--button-bg);
-  color: var(--text-main);
-}
-
-button[data-number]:hover {
-  background: var(--button-hover);
-  transform: translateY(-2px);
-}
-
-button[data-number]:active {
-  background: var(--button-active);
-  transform: translateY(0);
-}
-
+button.operation,
 button[data-clear],
 button[data-delete],
 button[data-decimal] {
-  background: var(--button-action-bg);
-  color: var(--button-action);
+  background: #232b34;
+  color: #ff9500;
 }
 
+button.operation:hover,
 button[data-clear]:hover,
 button[data-delete]:hover,
 button[data-decimal]:hover {
-  background: var(--button-hover);
+  background: #3a4149;
 }
 
+button.operation:active,
+button[data-number]:active,
 button[data-clear]:active,
 button[data-delete]:active,
 button[data-decimal]:active {
-  background: var(--button-active);
+  background: #181f25;
 }
 
-.equals {
-  background: var(--button-action);
-  color: var(--text-main);
-  font-size: 1.7rem;
-  font-weight: 500;
-  border: none;
+button.equals {
+  background: #ff9500;
+  box-shadow: var(--equals-shadow);
 }
 
 .equals:hover {
-  background: var(--button-equals-hover);
+  background: #ff9d47;
   transform: translateY(-2px);
 }
 
 .equals:active {
-  background: var(--button-equals-active);
-  color: var(--text-main);
+  background: #ff7c0a;
+  color: #fff;
 }
 
 .span-two {
@@ -181,7 +142,7 @@ button[data-decimal]:active {
 }
 
 .current-operand-error-message {
-  color: var(--error-message);
+  color: #ff6b6b;
   font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
