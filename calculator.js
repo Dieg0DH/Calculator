@@ -17,7 +17,7 @@ export class Calculator {
   }
 
   delete() {
-    if (this.currentOperand === "0" || this.currentOperand.length === 1) {
+    if (this.currentOperand.length <= 1) {
       this.currentOperand = "0";
     } else {
       this.currentOperand = this.currentOperand.slice(0, -1);
@@ -26,34 +26,51 @@ export class Calculator {
   }
 
   appendNumber(number) {
+    number = number.toString();
     if (this.justComputed) {
-      this.currentOperand = number.toString();
+      this.currentOperand = number;
       this.justComputed = false;
-      this.updateDisplay();
-      return;
-    }
-
-    if (number === "." && this.currentOperand.includes(".")) return;
-
-    if (this.currentOperand === "0" && number !== ".") {
-      this.currentOperand = number.toString();
+    } else if (number === "." && this.currentOperand.includes(".")) {
+    } else if (this.currentOperand === "0" && number !== ".") {
+      this.currentOperand = number;
     } else {
-      this.currentOperand = this.currentOperand.toString() + number.toString();
+      this.currentOperand += number;
     }
-
     this.updateDisplay();
   }
 
   setOperation(operation) {
-    if (this.currentOperand === "") return;
+    if (
+      this.currentOperand === "" ||
+      this.currentOperand === ERROR_MESSAGES.DIVISION_BY_ZERO
+    ) {
+      if (this.previousOperand !== "") {
+        this.operation = operation;
+        this.updateDisplay();
+      }
+      return;
+    }
 
-    if (this.previousOperand !== "") {
+    if (
+      this.previousOperand !== "" &&
+      this.currentOperand !== "" &&
+      this.operation
+    ) {
       this.compute();
+
+      if (
+        this.currentOperand !== "" &&
+        this.currentOperand !== ERROR_MESSAGES.DIVISION_BY_ZERO
+      ) {
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = "";
+      }
+    } else if (this.previousOperand === "" || this.currentOperand !== "") {
+      this.previousOperand = this.currentOperand;
+      this.currentOperand = "";
     }
 
     this.operation = operation;
-    this.previousOperand = this.currentOperand;
-    this.currentOperand = "0";
     this.updateDisplay();
   }
 
