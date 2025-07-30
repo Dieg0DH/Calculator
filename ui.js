@@ -63,6 +63,7 @@ export class CalculatorUI {
           break;
         case "Enter":
         case "=":
+          e.preventDefault();
           this.calculator.compute();
           break;
         case "Backspace":
