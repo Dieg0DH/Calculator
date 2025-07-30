@@ -12,7 +12,6 @@ export class Calculator {
     this.currentOperand = "0";
     this.previousOperand = "";
     this.operation = undefined;
-    this.hasDecimal = false;
     this.justComputed = false;
     this.updateDisplay();
   }
@@ -20,10 +19,6 @@ export class Calculator {
   delete() {
     if (this.currentOperand === "0" || this.currentOperand.length === 1) {
       this.currentOperand = "0";
-      this.hasDecimal = false;
-    } else if (this.currentOperand.slice(-1) === ".") {
-      this.hasDecimal = false;
-      this.currentOperand = this.currentOperand.slice(0, -1);
     } else {
       this.currentOperand = this.currentOperand.slice(0, -1);
     }
