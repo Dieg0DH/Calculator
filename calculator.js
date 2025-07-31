@@ -27,15 +27,20 @@ export class Calculator {
 
   appendNumber(number) {
     number = number.toString();
+
     if (this.justComputed) {
       this.currentOperand = number;
       this.justComputed = false;
-    } else if (number === "." && this.currentOperand.includes(".")) {
-    } else if (this.currentOperand === "0" && number !== ".") {
-      this.currentOperand = number;
     } else {
-      this.currentOperand += number;
+      if (number === "." && this.currentOperand.includes(".")) return;
+
+      if (this.currentOperand === "0" && number !== ".") {
+        this.currentOperand = number;
+      } else {
+        this.currentOperand += number;
+      }
     }
+
     this.updateDisplay();
   }
 
@@ -153,15 +158,28 @@ export class Calculator {
 
   updateDisplay() {
     if (this.currentElement) {
-      this.currentElement.innerText = this.getDisplayNumber(
-        this.currentOperand
-      );
-    }
+      const displayText = this.getDisplayNumber(this.currentOperand);
+      this.currentElement.innerText = displayText;
 
-    if (this.currentOperand === ERROR_MESSAGES.DIVISION_BY_ZERO) {
-      this.currentElement.classList.add("current-operand-error-message");
-    } else {
-      this.currentElement.classList.remove("current-operand-error-message");
+      const sizeClasses = [
+        { threshold: 15, className: "very-small-text" },
+        { threshold: 10, className: "small-text" },
+      ];
+
+      this.currentElement.classList.remove(
+        ...sizeClasses.map((s) => s.className)
+      );
+
+      const digitCount = displayText.replace(/[^0-9]/g, "").length;
+      const sizeClass = sizeClasses.find((s) => digitCount > s.threshold);
+      if (sizeClass) {
+        this.currentElement.classList.add(sizeClass.className);
+      }
+
+      this.currentElement.classList.toggle(
+        "current-operand-error-message",
+        this.currentOperand === ERROR_MESSAGES.DIVISION_BY_ZERO
+      );
     }
 
     if (this.previousElement) {
