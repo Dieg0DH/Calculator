@@ -7,17 +7,26 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="calculator.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="calculator">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+
       <div class="display">
         <div class="previous-operand" data-previous-operand></div>
         <div class="current-operand" data-current-operand>0</div>
       </div>
 
       <div class="buttons">
-        <button data-clear class="span-two function">AC</button>
-        <button data-delete class="function">⌫</button>
+        <button data-clear class="span-two">AC</button>
+        <button data-delete>⌫</button>
         <button data-operation="÷" class="operation">÷</button>
 
         <button data-number>7</button>
