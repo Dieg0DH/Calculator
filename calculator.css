@@ -1,13 +1,41 @@
 :root {
-  --calc-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+  --bg-color: #ffffff;
+  --calc-bg: #232b34;
+  --button-bg: #232b34;
+  --button-hover: #3a4149;
+  --button-active: #181f25;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --operation-color: #ff9500;
+  --operation-hover: #ff9d47;
+  --operation-active: #ff7c0a;
+  --shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.25);
   --button-shadow: 0 2px 0 rgba(255, 255, 255, 0.1) inset,
     0 4px 8px rgba(0, 0, 0, 0.214);
   --equals-shadow: 0 2px 0 rgba(255, 255, 255, 0.36) inset,
     0 4px 8px rgba(0, 0, 0, 0.214);
 }
 
+[data-theme="light"] {
+  --bg-color: #232b34;
+  --calc-bg: #ffffff;
+  --button-bg: #f0f0f0;
+  --button-hover: #a3d9ff;
+  --button-active: #d1eaff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --operation-color: #ff9500;
+  --operation-hover: #ff9d47;
+  --operation-active: #e68600;
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --button-shadow: 0 2px 0 rgba(0, 0, 0, 0.05) inset,
+    0 4px 8px rgba(0, 0, 0, 0.1);
+  --equals-shadow: 0 2px 0 rgba(0, 0, 0, 0.05) inset,
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 body {
-  background: #ffffff;
+  background: var(--bg-color);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,48 +43,51 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
+  transition: background-color 0.3s ease;
 }
 
 .calculator {
-  background: #232b34;
+  background: var(--calc-bg);
   padding: 32px 18px 18px 18px;
   border-radius: 36px;
-  box-shadow: var(--calc-shadow);
+  box-shadow: var(--shadow);
   max-width: 340px;
   width: 100%;
   overflow: hidden;
   position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .display {
-  padding: 18px 10px 0 10px;
-  min-height: 110px;
-  max-height: 110px;
-  margin-bottom: 10px;
-  text-align: right;
+  min-height: 160px;
+  max-height: 160px;
+  padding: 24px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: transparent;
+  word-break: break-all;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .previous-operand {
-  color: #b0b0b0;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   min-height: 1.3rem;
   margin-bottom: 6px;
   opacity: 0.7;
+  text-align: right;
 }
 
 .current-operand {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 2.7rem;
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 8px 0;
   text-align: right;
   letter-spacing: 1px;
-  transition: font-size 0.2s ease;
+  transition: font-size 0.2s ease, color 0.3s ease;
 }
 
 .current-operand.small-text {
@@ -74,13 +105,13 @@ body {
   padding: 10px 0;
 }
 
-button {
+button:not(.theme-toggle) {
   padding: 0;
   font-size: 1.5rem;
   border: none;
   border-radius: 18px;
-  background: #232b34;
-  color: #fff;
+  background: var(--button-bg);
+  color: var(--text-primary);
   cursor: pointer;
   font-weight: 500;
   width: 64px;
@@ -90,33 +121,34 @@ button {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease, background-color 0.3s ease, color 0.3s ease;
   position: relative;
 }
 
 button:hover {
-  background: #3a4149;
+  background: var(--button-hover);
   transform: translateY(-2px);
 }
 
 button:active {
   transform: translateY(0);
   opacity: 0.85;
+  background: var(--button-active);
 }
 
 button.operation,
 button[data-clear],
 button[data-delete],
 button[data-decimal] {
-  background: #232b34;
-  color: #ff9500;
+  background: var(--button-bg);
+  color: var(--operation-color);
 }
 
 button.operation:hover,
 button[data-clear]:hover,
 button[data-delete]:hover,
 button[data-decimal]:hover {
-  background: #3a4149;
+  background: var(--button-hover);
 }
 
 button.operation:active,
@@ -124,22 +156,22 @@ button[data-number]:active,
 button[data-clear]:active,
 button[data-delete]:active,
 button[data-decimal]:active {
-  background: #181f25;
+  background: var(--button-active);
 }
 
 button.equals {
-  background: #ff9500;
+  background: var(--operation-color);
   box-shadow: var(--equals-shadow);
+  color: white;
 }
 
-.equals:hover {
-  background: #ff9d47;
+button.equals:hover {
+  background: var(--operation-hover);
   transform: translateY(-2px);
 }
 
-.equals:active {
-  background: #ff7c0a;
-  color: #fff;
+button.equals:active {
+  background: var(--operation-active);
 }
 
 .span-two {
@@ -187,4 +219,59 @@ button.equals {
   .current-operand {
     font-size: 1.7rem;
   }
+}
+
+/* Theme toggle */
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.5);
+  background: var(--button-hover);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: 1.2rem;
+}
+
+[data-theme="light"] .theme-toggle .fa-moon {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .fa-sun {
+  display: block;
+  color: #ffc107;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun,
+.theme-toggle .fa-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon,
+.theme-toggle .fa-moon {
+  display: block;
+  color: #ffc107;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
