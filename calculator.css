@@ -174,9 +174,9 @@ button.equals:active {
   background: var(--operation-active);
 }
 
-.span-two {
+button.span-two {
   grid-column: span 2;
-  width: 144px !important;
+  width: 144px;
   border-radius: 18px;
   justify-content: center;
   padding-left: 0;
