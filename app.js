@@ -1,7 +1,10 @@
 import { Calculator } from "./calculator.js";
 import { CalculatorUI } from "./ui.js";
+import { ThemeManager } from "./theme.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const themeManager = new ThemeManager();
+
   const previousOperandElement = document.querySelector(
     "[data-previous-operand]"
   );
@@ -16,4 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const ui = new CalculatorUI(calculator);
 
   calculator.updateDisplay();
+
+  window.themeManager = themeManager;
 });
