@@ -28,6 +28,9 @@ export class Calculator {
   appendNumber(number) {
     number = number.toString();
 
+    const digitCount = this.currentOperand.replace(/[^0-9]/g, "").length;
+    if (digitCount >= 13 && number !== ".") return;
+
     if (this.justComputed) {
       this.currentOperand = number;
       this.justComputed = false;
