@@ -176,7 +176,7 @@ button.equals:active {
 
 .span-two {
   grid-column: span 2;
-  width: 144px;
+  width: 144px !important;
   border-radius: 18px;
   justify-content: center;
   padding-left: 0;
