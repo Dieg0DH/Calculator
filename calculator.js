@@ -1,4 +1,5 @@
 import { OPERATIONS, ERROR_MESSAGES } from "./constants.js";
+import { formatNumber } from "./utils.js";
 
 export class Calculator {
   constructor(previousElement, currentElement) {
@@ -142,21 +143,7 @@ export class Calculator {
 
     if (!number) return "0";
 
-    const [integerPart, decimalPart] = number.toString().split(".");
-    let display = "";
-
-    if (integerPart) {
-      const parsedInt = parseFloat(integerPart);
-      if (!isNaN(parsedInt)) {
-        display = parsedInt.toLocaleString("en");
-      }
-    }
-
-    if (decimalPart != null) {
-      return `${display || "0"}.${decimalPart}`;
-    }
-
-    return display || "0";
+    return formatNumber(number);
   }
 
   updateDisplay() {
