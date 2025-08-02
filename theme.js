@@ -53,9 +53,3 @@ export class ThemeManager {
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const themeManager = new ThemeManager();
-
-  window.themeManager = themeManager;
-});
