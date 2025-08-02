@@ -1,6 +1,4 @@
-import { CONFIG } from "./constants.js";
-
-export function tosignificant(num, digits = CONFIG.SIGNIGICANT_DIGITS) {
+export function tosignificant(num, digits = 10) {
   if (num === 0) return 0;
   const multiplier = Math.pow(
     10,
@@ -12,7 +10,7 @@ export function tosignificant(num, digits = CONFIG.SIGNIGICANT_DIGITS) {
 export function formatNumber(number) {
   if (number === "Error") return "Error";
 
-  const stringNumber = number.toStting();
+  const stringNumber = number.toString();
 
   if (stringNumber.includes("e")) {
     return stringNumber;
