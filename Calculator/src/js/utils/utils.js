@@ -1,4 +1,4 @@
-export function tosignificant(num, digits = 10) {
+export function toSignificant(num, digits = 10) {
   if (num === 0) return 0;
   const multiplier = Math.pow(
     10,
