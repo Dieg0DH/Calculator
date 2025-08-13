@@ -4,6 +4,7 @@
   --button-bg: #232b34;
   --button-hover: #3a4149;
   --button-active: #181f25;
+  --button-active-keyboard: #58626d;
   --text-primary: #ffffff;
   --text-secondary: #b0b0b0;
   --operation-color: #ff9500;
@@ -280,7 +281,7 @@ button.span-two {
 /* Active by keyboard */
 
 button.active-by-keyboard {
-  background: var(--button-active);
+  background: var(--button-active-keyboard);
   transform: translateY(0);
   opacity: 0.85;
 }

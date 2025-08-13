@@ -1,5 +1,5 @@
 import { OPERATIONS, ERROR_MESSAGES } from "./constants.js";
-import { formatNumber } from "./utils.js";
+import { formatNumber } from "./utils/utils.js";
 
 export class Calculator {
   constructor(previousElement, currentElement) {
