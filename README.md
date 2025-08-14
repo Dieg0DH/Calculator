@@ -59,8 +59,9 @@ s	Toggle sign (+/–)
 
 - Use the number buttons (0-9) to input numbers
 - Use `+`, `-`, `*`, `/` for basic arithmetic
-- Press `=` to see the result
-- Press `AC` to clear all
+- Press `=` or `Enter` to see the result
+- Press `Backspace` to delete the last digit
+- Press `AC` or `Escape` to clear all
 
 
 🏗️ Project Structure
