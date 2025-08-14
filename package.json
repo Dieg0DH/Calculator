@@ -1,0 +1,48 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A sleek, responsive calculator web application built with vanilla JavaScript, HTML, and CSS.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "Dieg0DH",
+    "productName": "Calculator",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "Calculator/public/**/*",
+      "Calculator/src/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "Calculator/public/favicon.ico"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "Calculator/public/favicon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "Calculator/public/favicon.ico"
+    }
+  }
+}
