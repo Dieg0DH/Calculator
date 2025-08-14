@@ -63,10 +63,10 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder. O
   </ul>
 </details>
 
-🏗️ Project Structure
+
 
 <details>
-  <summary><strong>📂 Calculator — Project Structure</strong></summary>
+  <summary><strong>🏗️ Project Structure</strong></summary>
 
   <br>
 
