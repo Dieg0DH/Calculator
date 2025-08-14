@@ -5,10 +5,9 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 ## ✨ Features
 
 - **Basic Operations**: Addition, subtraction, multiplication, and division
-- **Advanced Features**:
+- **Other Features**:
   - Clear all functions
-- **Responsive Design**: Works seamlessly on both desktop and mobile devices
-- **Keyboard Support**: Full keyboard accessibility with shortcuts
+- **Keyboard Support**: Full keyboard accessibility
 - **Modern UI**: Clean, animated interface with theme support (light/dark)
 - **Error Handling**: Graceful handling of edge cases (e.g., division by zero)
 
