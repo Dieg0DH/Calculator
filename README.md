@@ -6,7 +6,6 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 
 - **Basic Operations**: Addition, subtraction, multiplication, and division
 - **Advanced Features**:
-  - Percentage calculations
   - Toggle between positive/negative numbers
   - Clear entry and clear all functions
 - **Responsive Design**: Works seamlessly on both desktop and mobile devices
