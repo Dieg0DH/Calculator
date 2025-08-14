@@ -66,7 +66,6 @@ npm run dist
 - Clear: `Escape`
 - Decimal: `.`
 - Toggle sign: `s`
-- Percentage: `%`
 
 ## 🏗️ Project Structure
 
