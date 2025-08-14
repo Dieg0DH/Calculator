@@ -1,105 +1,99 @@
-# Modern Web Calculator
+# Desktop and Web Calculator
 
-A sleek, responsive calculator web application built with vanilla JavaScript, HTML, and CSS, packaged with Electron for cross-platform desktop use.
+A sleek, responsive calculator web application built with vanilla JavaScript, HTML, and CSS, packaged with Electron for Windows desktop use.
 
 ## ✨ Features
 
-- **Basic Operations**: Addition, subtraction, multiplication, and division
-- **Advanced Features**:
-  - Percentage calculations
-  - Toggle between positive/negative numbers
-  - Clear entry and clear all functions
-- **Responsive Design**: Works seamlessly on both desktop and mobile devices
-- **Keyboard Support**: Full keyboard accessibility
-- **Modern UI**: Clean interface with smooth animations
-- **Cross-Platform**: Available as a desktop application (Windows, macOS, Linux)
-- **Error Handling**: Graceful handling of edge cases (e.g., division by zero)
+- Basic operations: addition, subtraction, multiplication, division
+- Features:
+  - Clear all (AC)
+  - Responsive design: works great on desktop and mobile
+  - Full keyboard support
+  - Modern UI: clean, animated interface
+  - Error handling for edge cases (e.g., division by zero)
+  - Theme support (light/dark)
 
-## 🚀 Installation
+## 📸 Preview
+
+<p align="center">
+  <img src="Calculator/public/image.png" alt="Calculator App banner showing light and dark themes" />
+</p>
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js 16+ (LTS recommended)
 - npm (comes with Node.js)
 
-### Steps
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Dieg0DH/Calculator.git
-   cd Calculator
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Run the application:
-   ```bash
-   npm start
-   ```
-
-### Building for Production
-
-To create a distributable package:
+### Install & Run (Development)
 
 ```bash
+git clone https://github.com/Dieg0DH/Calculator.git
+cd Calculator
+npm install
+npm start
+
+This launches the Electron app. You can also open public/calculator.html directly in a browser for the web version.
+Build Desktop App (Production)
+
+Bash
+
 npm run dist
-```
 
-## 🖥️ Usage
+The packaged executables (Windows .exe) will be generated in the dist/ folder.
 
-### Basic Operations
+🎹 Keyboard Shortcuts
+Key(s)	Action
+0–9	Input number
++, -, *, /	Operators
+= or Enter	Equals
+.	Decimal point
+Escape	Clear (C)
+A (or AC btn)	Clear all (AC)
+s	Toggle sign (+/–)
 
-- Use the number buttons (0-9) to input numbers
-- Use `+`, `-`, `*`, `/` for basic arithmetic
-- Press `=` to see the result
-- Press `C` to clear the current entry
-- Press `AC` to clear all
+🖥️ Usage Tips
 
-### Keyboard Shortcuts
+    Click buttons or use your keyboard for fast input.
 
-- Numbers: `0-9`
-- Operators: `+`, `-`, `*`, `/`
-- Equals: `=` or `Enter`
-- Clear: `Escape`
-- Decimal: `.`
-- Toggle sign: `s`
-- Percentage: `%`
 
-## 🏗️ Project Structure
+🏗️ Project Structure
 
-```
 Calculator/
-├── public/
-│   ├── calculator.html
-│   └── favicon.ico
+├── 📁 public/
+│ ├── 📄 calculator.html
+│ ├── 🖼️ favicon.ico
+│ └── 🖼️ image.png
 │
-├── src/
-│   ├── assets/
-│   │   └── styles/
-│   │       ├── reset.css
-│   │       ├── calculator.css
-│   │       └── theme.css
-│   │
-│   └── js/
-│       ├── app.js
-│       ├── calculator.js
-│       ├── ui.js
-│       ├── constants.js
-│       ├── theme.js
-│       └── utils/
-│           └── utils.js
+├── 📁 src/
+│ ├── 📁 assets/
+│ │ └── 📁 styles/
+│ │ ├── 📄 reset.css
+│ │ ├── 📄 calculator.css
+│ │ └── 📄 theme.css
+│ │
+│ └── 📁 js/
+│ ├── 📄 app.js
+│ ├── 📄 calculator.js
+│ ├── 📄 ui.js
+│ ├── 📄 constants.js
+│ ├── 📄 theme.js
+│ └── 📁 utils/
 │
-├── main.js
-├── package.json
-└── README.md
+├── 📄 .gitignore
+├── 📄 main.js
+├── 📄 package.json
+└── 📄 README.md
+
+🧪 Tech Stack
+
+    Electron (desktop packaging)
+    Vanilla JavaScript, HTML, CSS
+
+
+🙏 Acknowledgments
+
+    Built with <a href="https://www.electronjs.org/">Electron</a>
+    Inspired by modern calculator UIs
 ```
-
-## 🙏 Acknowledgments
-
-- Built with [Electron](https://www.electronjs.org/)
-- Inspired by modern calculator UIs
