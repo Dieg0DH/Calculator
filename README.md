@@ -56,7 +56,7 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder.
 
 🏗️ Project Structure
 
-Calculator
+Calculator:
 
 ```
 ├── 📁 Calculator/
