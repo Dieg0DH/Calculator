@@ -41,7 +41,8 @@ Build Desktop App (Production)
 npm run dist
 ```
 
-The packaged executables (Windows .exe) will be generated in the dist/ folder. Or just download the (.exe) bellow:
+The packaged executables (Windows .exe) will be generated in the dist/ folder.
+Or just download the (.exe) bellow:
 
 ## 📥 Download
 
