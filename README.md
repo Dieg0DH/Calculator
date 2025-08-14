@@ -32,16 +32,18 @@ git clone https://github.com/Dieg0DH/Calculator.git
 cd Calculator
 npm install
 npm start
+```
 
 This launches the Electron app. You can also open public/calculator.html directly in a browser for the web version.
 Build Desktop App (Production)
 
-Bash
+```Bash
 
 npm run dist
+```
 
 The packaged executables (Windows .exe) will be generated in the dist/ folder.
-```
+
 
 🖥️ Usage Tips
 
