@@ -85,12 +85,12 @@ Calculator/
 └── 📄 README.md
 ```
 
-###🧪 Tech Stack
+🧪 Tech Stack
 
     Electron (desktop packaging)
     Vanilla JavaScript, HTML, CSS
 
-###🙏 Acknowledgments
+🙏 Acknowledgments
 
     Built with <a href="https://www.electronjs.org/">Electron</a>
     Inspired by modern calculator UIs
