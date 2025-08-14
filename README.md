@@ -46,7 +46,7 @@ Or just download the (.exe) bellow:
 
 ## 📥 Download
 
-  [![Download for Windows](https://github.com/Dieg0DH/Calculator/commits/v1.0.0)]
+  [![Download for Windows](https://github.com/Dieg0DH/Calculator/releases/tag/v1.0.0)]
 
 <details>
   <summary><strong>🖥️ Usage Tips</strong></summary>
