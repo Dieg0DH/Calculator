@@ -56,32 +56,35 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder.
 
 🏗️ Project Structure
 
-Calculator/
+Calculator
+
+```
 ├── 📁 Calculator/
-│ ├── 📁 src/
-│ │ ├── 📁 assets/
-│ │ │ └── 📁 styles/
-│ │ │ ├── 📄 reset.css
-│ │ │ ├── 📄 calculator.css
-│ │ │ └── 📁 font/
-│ │ │ ├── 📁 css/
-│ │ │ └── 📁 webfonts/
-│ │ │
-│ │ └── 📁 js/
-│ │ ├── 📄 app.js
-│ │ ├── 📄 calculator.js
-│ │ ├── 📄 ui.js
-│ │ ├── 📄 constants.js
-│ │ ├── 📄 theme.js
-│ │ └── 📁 utils/
-│ │ └── 📄 utils.js
-│ │
-│ └── 📁 public/
-│ ├── 📄 calculator.html
-│ ├── 🖼️ favicon.ico
-│ └── 🖼️ image.png
+│   ├── 📁 src/
+│   │   ├── 📁 assets/
+│   │   │   └── 📁 styles/
+│   │   │       ├── 📄 reset.css
+│   │   │       ├── 📄 calculator.css
+│   │   │       └── 📁 font/
+│   │   │           ├── 📁 css/
+│   │   │           └── 📁 webfonts/
+│   │
+│   │   └── 📁 js/
+│   │       ├── 📄 app.js
+│   │       ├── 📄 calculator.js
+│   │       ├── 📄 ui.js
+│   │       ├── 📄 constants.js
+│   │       ├── 📄 theme.js
+│   │       └── 📁 utils/
+│   │           └── 📄 utils.js
+│   │
+│   └── 📁 public/
+│       ├── 📄 calculator.html
+│       ├── 🖼️ favicon.ico
+│       └── 🖼️ image.png
 │
 ├── 📄 .gitignore
 ├── 📄 main.js
 ├── 📄 package.json
 └── 📄 README.md
+```
