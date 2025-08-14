@@ -12,7 +12,6 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 - **Responsive Design**: Works seamlessly on both desktop and mobile devices
 - **Keyboard Support**: Full keyboard accessibility
 - **Modern UI**: Clean interface with smooth animations
-- **Cross-Platform**: Available as a desktop application (Windows, macOS, Linux)
 - **Error Handling**: Graceful handling of edge cases (e.g., division by zero)
 
 ## 🚀 Installation
