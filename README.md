@@ -41,21 +41,11 @@ Bash
 npm run dist
 
 The packaged executables (Windows .exe) will be generated in the dist/ folder.
-
-🎹 Keyboard Shortcuts
-Key(s)	Action
-0–9	Input number
-+, -, *, /	Operators
-= or Enter	Equals
-.	Decimal point
-Escape	Clear (C)
-A (or AC btn)	Clear all (AC)
-s	Toggle sign (+/–)
 ```
 
 🖥️ Usage Tips
 
-    Click buttons or use your keyboard for fast input.
+🎹 Click buttons or use your keyboard for fast input.
 
 - Use the number buttons (0-9) to input numbers
 - Use `+`, `-`, `*`, `/` for basic arithmetic
