@@ -25,6 +25,7 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 - npm (comes with Node.js)
 
 ### Install & Run (Development)
+This launches the Electron app. You can also open public/calculator.html directly in a browser for the web version.
 
 ```bash
 git clone https://github.com/Dieg0DH/Calculator.git
@@ -33,7 +34,6 @@ npm install
 npm start
 ```
 
-This launches the Electron app. You can also open public/calculator.html directly in a browser for the web version.
 Build Desktop App (Production)
 
 ```Bash
@@ -41,7 +41,8 @@ Build Desktop App (Production)
 npm run dist
 ```
 
-The packaged executables (Windows .exe) will be generated in the dist/ folder. Or just download the (.exe) bellow:
+The packaged executables (Windows .exe) will be generated in the dist/ folder.
+Or just download the (.exe) bellow:
 
 ## 📥 Download
 
