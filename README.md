@@ -51,11 +51,11 @@ Key(s)	Action
 Escape	Clear (C)
 A (or AC btn)	Clear all (AC)
 s	Toggle sign (+/–)
+```
 
 🖥️ Usage Tips
 
     Click buttons or use your keyboard for fast input.
-
 
 - Use the number buttons (0-9) to input numbers
 - Use `+`, `-`, `*`, `/` for basic arithmetic
@@ -63,7 +63,7 @@ s	Toggle sign (+/–)
 - Press `Backspace` to delete the last digit
 - Press `AC` or `Escape` to clear all
 
-
+```
 🏗️ Project Structure
 
 Calculator/
@@ -91,15 +91,14 @@ Calculator/
 ├── 📄 main.js
 ├── 📄 package.json
 └── 📄 README.md
+```
 
 🧪 Tech Stack
 
     Electron (desktop packaging)
     Vanilla JavaScript, HTML, CSS
 
-
 🙏 Acknowledgments
 
     Built with <a href="https://www.electronjs.org/">Electron</a>
     Inspired by modern calculator UIs
-```
