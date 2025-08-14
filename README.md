@@ -48,17 +48,20 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder. O
 
   [![Download for Windows](https://github.com/Dieg0DH/Calculator/commits/v1.0.0)]
 
-  
+<details>
+  <summary><strong>🖥️ Usage Tips</strong></summary>
 
-🖥️ Usage Tips
+  <br>
+  🎹 Click buttons or use your keyboard for fast input.
 
-🎹 Click buttons or use your keyboard for fast input.
-
-- Use the number buttons (0-9) to input numbers
-- Use `+`, `-`, `*`, `/` for basic arithmetic
-- Press `=` or `Enter` to see the result
-- Press `Backspace` to delete the last digit
-- Press `AC` or `Escape` to clear all
+  <ul>
+    <li>Use the number buttons (0–9) to input numbers</li>
+    <li>Use <kbd>+</kbd>, <kbd>-</kbd>, <kbd>*</kbd>, <kbd>/</kbd> for basic arithmetic</li>
+    <li>Press <kbd>=</kbd> or <kbd>Enter</kbd> to see the result</li>
+    <li>Press <kbd>Backspace</kbd> to delete the last digit</li>
+    <li>Press <kbd>AC</kbd> or <kbd>Escape</kbd> to clear all</li>
+  </ul>
+</details>
 
 🏗️ Project Structure
 
