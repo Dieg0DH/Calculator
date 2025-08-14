@@ -53,9 +53,9 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder.
 - Press `Backspace` to delete the last digit
 - Press `AC` or `Escape` to clear all
 
-```
 🏗️ Project Structure
 
+```
 Calculator/
 ├── 📁 public/
 │ ├── 📄 calculator.html
