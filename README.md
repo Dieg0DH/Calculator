@@ -4,14 +4,13 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 
 ## ✨ Features
 
-- Basic operations: addition, subtraction, multiplication, division
-- Features:
-  - Clear all (AC)
-  - Responsive design: works great on desktop and mobile
-  - Full keyboard support
-  - Modern UI: clean, animated interface
-  - Error handling for edge cases (e.g., division by zero)
-  - Theme support (light/dark)
+- **Basic Operations**: Addition, subtraction, multiplication, and division
+- **Advanced Features**:
+  - Clear all functions
+- **Responsive Design**: Works seamlessly on both desktop and mobile devices
+- **Keyboard Support**: Full keyboard accessibility with shortcuts
+- **Modern UI**: Clean, animated interface with theme support (light/dark)
+- **Error Handling**: Graceful handling of edge cases (e.g., division by zero)
 
 ## 📸 Preview
 
@@ -56,6 +55,12 @@ s	Toggle sign (+/–)
 🖥️ Usage Tips
 
     Click buttons or use your keyboard for fast input.
+
+
+- Use the number buttons (0-9) to input numbers
+- Use `+`, `-`, `*`, `/` for basic arithmetic
+- Press `=` to see the result
+- Press `AC` to clear all
 
 
 🏗️ Project Structure
