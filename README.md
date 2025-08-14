@@ -46,7 +46,7 @@ The packaged executables (Windows .exe) will be generated in the dist/ folder. O
 
 ## 📥 Download
 
-  [![Download for Windows](https://github.com/Dieg0DH/Calculator/commits/v1.0.0)
+  [![Download for Windows](https://github.com/Dieg0DH/Calculator/commits/v1.0.0)]
 
   
 
