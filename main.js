@@ -3,7 +3,7 @@ const path = require("path");
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 380,
+    width: 360,
     height: 650,
     icon: path.join(__dirname, "Calculator", "public", "favicon.ico"),
     webPreferences: {
