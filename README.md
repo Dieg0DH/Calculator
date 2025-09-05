@@ -2,6 +2,13 @@
 
 A sleek, responsive calculator web application built with vanilla JavaScript, HTML, and CSS, packaged with Electron for Windows desktop use.
 
+## 📸 Preview
+
+<p align="center">
+  <img src="Calculator/public/image.png" alt="Calculator App banner showing light and dark themes" />
+</p>
+
+
 ## ✨ Features
 
 - **Basic Operations**: Addition, subtraction, multiplication, and division
@@ -11,11 +18,6 @@ A sleek, responsive calculator web application built with vanilla JavaScript, HT
 - **Modern UI**: Clean, animated interface with theme support (light/dark)
 - **Error Handling**: Graceful handling of edge cases (e.g., division by zero)
 
-## 📸 Preview
-
-<p align="center">
-  <img src="Calculator/public/image.png" alt="Calculator App banner showing light and dark themes" />
-</p>
 
 ## 🚀 Getting Started
 
